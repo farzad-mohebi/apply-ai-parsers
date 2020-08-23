@@ -31,6 +31,7 @@ class Scraper:
         for result in search_results:
             job = {
                 'title': result.find("h5").text,
+                'company': 'Lever',
                 'link': result.find("a", {"class": "posting-title"})['href'],
                 'location': None,
                 'description': None
